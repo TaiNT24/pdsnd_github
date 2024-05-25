@@ -77,7 +77,7 @@ def get_filters():
                 input(
                     "Which day - Please type an integer as: 1=Sunday 2=Monday, 3=Tuesday, 4=Wednesday, 5=Thursday, 6=Friday, 7=Saturday ?\n"))
 
-    print('-' * 40)
+    print('-' * 60)
     return city, month, day
 
 
@@ -146,7 +146,7 @@ def time_stats(df):
           f"Filter: {filter_month_day}")
 
     print("\nThis took %s seconds." % (time.time() - start_time))
-    print('-' * 40)
+    print('-' * 60)
 
 
 def station_stats(df):
@@ -183,7 +183,7 @@ def station_stats(df):
         f"Filter: {filter_month_day}")
 
     print("\nThis took %s seconds." % (time.time() - start_time))
-    print('-' * 40)
+    print('-' * 60)
 
 
 def trip_duration_stats(df):
@@ -209,7 +209,7 @@ def trip_duration_stats(df):
 
 
     print("\nThis took %s seconds." % (time.time() - start_time))
-    print('-' * 40)
+    print('-' * 60)
 
 
 def user_stats(df, city):
@@ -247,7 +247,7 @@ def user_stats(df, city):
               .format(city.capitalize()))
 
     print("\nThis took %s seconds." % (time.time() - start_time))
-    print('-' * 40)
+    print('-' * 60)
 
 
 def view_raw_data(df):
