@@ -8,7 +8,7 @@ Include the date you created this project and README file.
 Project: Post your Work on GitHub
 
 ### Description
-Describe what your project is about and what it does
+This project to put what I've learned about version control and GitHub into practice! In this project, I'll be simulating a realistic workflow to refactor your previous BikeShare project using Git.
 
 ### Files used
 Include the files used
