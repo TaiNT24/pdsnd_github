@@ -50,10 +50,12 @@ def get_filters():
     print('Hello! Let\'s explore some US bikeshare data!')
 
     # Give the user choose what city user want to see data
-    city = format_input(input("Would you like to see data for Chicago, New York, or Washington?\n"))
+    city = format_input(
+        input("Would you like to see data for Chicago, New York, or Washington?\n"))
     while (city not in ('chicago', 'newyork', 'washington')):
         print('You should choose 1 of 3 city: Chicago, New York, or Washington')
-        city = format_input(input("Would you like to see data for Chicago, New York, or Washington?\n"))
+        city = format_input(
+            input("Would you like to see data for Chicago, New York, or Washington?\n"))
 
     # Give the user choose filter by month, day, both or not at all
     filter_data = format_input(input(
@@ -64,10 +66,12 @@ def get_filters():
             "Would you like to filter the data by \"month\", \"day\", \"both\" or not at all? Type \"no\" for no time filter\n"))
 
     if filter_data in ("month", "both"):
-        month = format_input(input("Which month - January, February, March, April, May, or June?\n"))
+        month = format_input(
+            input("Which month - January, February, March, April, May, or June?\n"))
         while (month not in ("january", "february", "march", "april", "may", "june")):
             print('You should choose: January, February, March, April, May, or June')
-            month = format_input(input("Which month - January, February, March, April, May, or June?\n"))
+            month = format_input(
+                input("Which month - January, February, March, April, May, or June?\n"))
 
     # If user choose day or both, ask user what day user want to see data
     if filter_data in ("day", "both"):
@@ -135,7 +139,8 @@ def time_stats(df):
 
     # Display the most common day of week
     common_weekday = df['Weekday'].mode()[0]
-    count_common_weekday = df['Weekday'][df['Weekday'] == common_weekday].count()
+    count_common_weekday = df['Weekday'][df['Weekday']
+                                         == common_weekday].count()
     print(f"\nMost common day of week: {common_weekday}, "
           f"Count: {count_common_weekday}, "
           f"Filter: {filter_month_day}")
@@ -159,7 +164,8 @@ def station_stats(df):
 
     # Display most commonly used start station
     common_start_station = df['Start Station'].mode()[0]
-    count_common_start_station = df['Start Station'][df['Start Station'] == common_start_station].count()
+    count_common_start_station = df['Start Station'][df['Start Station']
+                                                     == common_start_station].count()
     print(
         f"\nMost common Start Station: {common_start_station}, "
         f"Count: {count_common_start_station}, "
@@ -167,14 +173,16 @@ def station_stats(df):
 
     # Display most commonly used end station
     common_end_station = df['End Station'].mode()[0]
-    count_common_end_station = df['End Station'][df['End Station'] == common_end_station].count()
+    count_common_end_station = df['End Station'][df['End Station']
+                                                 == common_end_station].count()
     print(
         f"\nMost common Start Station: {common_end_station}, "
         f"Count: {count_common_end_station}, "
         f"Filter: {filter_month_day}")
 
     # Display most frequent combination of start station and end station trip
-    common_combine_station_df = df[['Start Station', 'End Station']].apply(tuple, axis=1).mode()
+    common_combine_station_df = df[['Start Station', 'End Station']].apply(
+        tuple, axis=1).mode()
     common_combine_station = common_combine_station_df[0]
     count_common_combine_station = df['Start Station'][(df['Start Station'] == common_combine_station[0])
                                                        & (df['End Station'] == common_combine_station[1])].count()
@@ -208,7 +216,6 @@ def trip_duration_stats(df):
         f"\nAverage travel time: \"{avg_travel_time}\" "
         f"Count: {count_travel_time}, "
         f"Filter: {filter_month_day}")
-
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-' * 40)
@@ -257,10 +264,13 @@ def view_raw_data(df):
     records_per_time = 5
     count_view = 0
 
-    view_data = format_input(input("Would you like to view next 5 records raw data? Enter yes or no.\n"))
+    view_data = format_input(
+        input("Would you like to view next 5 records raw data? Enter yes or no.\n"))
     while view_data == "yes":
-        print(df[count_view*records_per_time:(count_view + 1)*records_per_time].to_string())
-        view_data = format_input(input("Would you like to view next 5 records raw data? Enter yes or no.\n"))
+        print(df[count_view*records_per_time:(count_view + 1)
+              * records_per_time].to_string())
+        view_data = format_input(
+            input("Would you like to view next 5 records raw data? Enter yes or no.\n"))
         count_view += 1
 
 
