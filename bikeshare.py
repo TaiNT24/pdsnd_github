@@ -1,9 +1,11 @@
 import time
 import pandas as pd
 
-CITY_DATA = {'chicago': 'chicago.csv',
-             'newyork': 'new_york_city.csv',
-             'washington': 'washington.csv'}
+CITY_DATA = {
+    'chicago': 'chicago.csv',
+    'newyork': 'new_york_city.csv',
+    'washington': 'washington.csv'
+}
 
 MAPPING_WEEKDAY = {
     "1": "Sunday",
