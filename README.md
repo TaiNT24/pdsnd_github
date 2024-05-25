@@ -1,18 +1,19 @@
->**Note**: Please **fork** the current Udacity repository so that you will have a **remote** repository in **your** Github account. Clone the remote repository to your local machine. Later, as a part of the project "Post your Work on Github", you will push your proposed changes to the remote repository in your Github account.
-
 ### Date created
-Include the date you created this project and README file.
 2024-05-25
 
 ### Project Title
-Project: Post your Work on GitHub
+Explore US Bikeshare Data
 
 ### Description
-This project to put what I've learned about version control and GitHub into practice! In this project, I'll be simulating a realistic workflow to refactor your previous BikeShare project using Git.
+This project explore data related to bike share systems for three major cities in the United States—Chicago, New York City, and Washington. 
+The project import the data and answer interesting questions about it by computing descriptive statistics. 
+The project also has script that takes in raw input to create an interactive experience in the terminal to present these statistics.
 
 ### Files used
-Include the files used
+chicago.csv
+washington.csv
+new_york_city.csv
 
 ### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
-
+http://www.mymarketresearchmethods.com/wp-content/uploads/2013/01/Chart-types.jpg
+https://pandas.pydata.org/Pandas_Cheat_Sheet.pdf
